@@ -4,14 +4,22 @@ import Header from "@/component/Header";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRouter } from "next/router";
 import Footer from "@/component/Footer";
-import { createContext,useState} from "react";
+import { createContext,useState,useEffect} from "react"
+import Head from "next/head";
 export const AppContext = createContext();
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
+  // useEffect(()=>{
+  //   document.body.style.zoom = "90%";
+  // },[]);
   return (
     <>
       <AppContext.Provider value={{ isMobile, setIsMobile }}>
+      <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=0.67" />
+        <title>Portfolio_</title>
+      </Head>
         <Header />
         <AnimatePresence mode="sync" style={{ overflow: "hidden" }}>
           <motion.div
