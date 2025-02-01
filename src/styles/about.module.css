@@ -61,7 +61,7 @@
   
   .skills li {
     font-size: 1.2rem;
-    color: #333;
+    color: #ada6a6;
     margin: 10px 20px;
     padding: 8px 16px;
     border: 2px solid #172c60;
@@ -70,7 +70,7 @@
   }
   
   .skills li:hover {
-    background-color: #0a1a42;
+    background-color: #0d4ef5;
     color: white;
     transform: scale(1.1);
   }

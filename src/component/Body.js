@@ -113,7 +113,7 @@ function Body() {
                   borderRadius: isExpanded ? 0 : "",
                   position: isExpanded ? "absolute" : "",
                   top:context.isMobile?isExpanded ? "300px" : "":isExpanded?"350px":"",
-                  lineHeight: context.isMobile?isExpanded ? "24px" : "":isExpanded?"30px":"",
+                  lineHeight: context.isMobile?isExpanded ? "23px" : "":isExpanded?"30px":"",
                   height:context.isMobile?isExpanded ? "450px" : "":isExpanded?"100vh":"",
                   borderRadius: isExpanded ? "0.5rem" : "",
                 }}
@@ -124,7 +124,7 @@ function Body() {
                       style={{
                         textAlign: "center",
                         fontSize: "1.8rem",
-                        paddingBottom: "6px",
+                        paddingBottom: "7px",
                       }}
                     >
                       Hey
@@ -145,7 +145,7 @@ function Body() {
                       {isExpanded ? (
                         word
                       ) : (
-                        <></>
+                        <>{/* Display truncated text */}</>
                       )}
                     </h1>
                   </div>

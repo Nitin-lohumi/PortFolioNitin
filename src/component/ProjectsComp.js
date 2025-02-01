@@ -15,6 +15,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/ROI_image_retrival_AI",
     githubLink: "https://github.com/Nitin-lohumi",
+    photo:"/photo4.png"
   },
   {
     projectName: "Blogs Contents",
@@ -23,6 +24,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/Blog_platform",
     githubLink: "https://github.com/Nitin-lohumi",
+    photo:"/photo5.png"
   },
   {
     projectName: "Chatting App using Database",
@@ -31,6 +33,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/chatAPP",
     githubLink: "https://github.com/Nitin-lohumi",
+    photo:"/chat.png"
   },
   {
     projectName: "Real-Time ChatApp",
@@ -39,6 +42,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://chatapp-s9gx.onrender.com/",
     githubLink: "https://github.com/Nitin-lohumi",
+    photo:"/chatRealTime.png"
   },
   {
     projectName: "News App",
@@ -47,6 +51,7 @@ const obj = [
     linkRedirect: "nitinnewsapp.vercel.app",
     githubprojectLink: "https://github.com/Nitin-lohumi/News_latest",
     githubLink: "https://github.com/Nitin-lohumi",
+    photo:"/news.png"
   },
 ];
 
@@ -85,6 +90,7 @@ function ProjectComp() {
           overflowX: context.isMobile ? "scroll" : "hidden",
           gridTemplateColumns: context.isMobile ? "1fr" : "1fr 3fr",
           width: "100%",
+          height:context.isMobile ? "auto" : "100vh",
         }}
       >
         <motion.div
@@ -94,7 +100,7 @@ function ProjectComp() {
             left: "0",
             zIndex: 10,
             color: "white",
-            width: "100%",
+            width: "50%",
             height: "70vh",
             display: context.isMobile ? "none" : "flex",
             flexDirection: "column",
@@ -120,7 +126,7 @@ function ProjectComp() {
           </h1>
           <motion.div
             style={{
-              width: "100%",
+              width: "50%",
               textAlign: "center",
               paddingTop: "5px",
               textAlign: "center",
@@ -240,8 +246,10 @@ function ProjectComp() {
                     </h2>
                     <div className="imgBox">
                       <Image
-                        src="/portfolio_pic.png"
+                        src={v.photo}
                         style={{
+                          marginTop:"10px",
+                          marginBottom:"30px",
                           scale: "1.9",
                           paddingBottom: "20px",
                           paddingTop: "20px",
@@ -372,9 +380,11 @@ function ProjectComp() {
                     </h2>
                     <div className="imgBox">
                       <Image
-                        src="/portfolio_pic.png"
+                        src={v.photo}
                         style={{
-                          scale: "1.9",
+                          marginTop:"10px",
+                          marginBottom:"30px",
+                          scale: "1.3",
                           paddingBottom: "20px",
                           paddingTop: "20px",
                         }}
