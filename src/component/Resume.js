@@ -12,7 +12,7 @@ function Resume() {
         <motion.div className={context.isMobile?style.resumeMobile:style.resume}>
           <motion.div className={context.isMobile?style.mainResumeMobile:style.mainResume}>
             <h2 style={{fontSize:"2rem",textAlign:"center",margin:"10px"}}>RESUME</h2>
-            <img src="/CVPhoto.png" alt="resume" className={style.resumeImg}/>
+            <img src="/resume1.png" alt="resume" className={style.resumeImg}/>
             <div className={style.download}>
               <p style={{fontSize:"1.5rem",textAlign:"center",padding:"10px"}}>Click to button to download Resume</p>
               <button style={{paddingTop:"10px",marginBottom:"10px",border:"1px solid white",padding:"5px",borderRadius:".5rem"}}>
