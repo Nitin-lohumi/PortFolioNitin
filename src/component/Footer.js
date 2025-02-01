@@ -42,16 +42,12 @@ export default function Footer() {
               <a href="tel:+7417696780" target="_blank" rel="noopener noreferrer">7417696780</a>
             </p>
             <p className={styles.contactPara}>
-              <i className="fa-brands fa-whatsapp"></i> WhatsApp: 
-              <a href="#" target="_blank" rel="noopener noreferrer">7417696780</a>
-            </p>
-            <p className={styles.contactPara}>
               <i className="fa-brands fa-instagram"></i> Instagram: 
-              <a href="#" target="_blank" rel="noopener noreferrer">lohumi_jii</a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Nitin Lohumi</a>
             </p>
             <p className={styles.contactPara}>
               <i className="fa-brands fa-telegram"></i> Telegram: 
-              <a href="#" target="_blank" rel="noopener noreferrer">Nitin Lohumi</a>
+              <a href="https://web.telegram.org/a/" target="_blank" rel="noopener noreferrer">Nitin</a>
             </p>
           </div>
         </motion.div>

@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import styles from '../styles/contact.module.css';
-
+import { IoCallOutline } from "react-icons/io5";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 export default function ContactComp() {
   return (
     <section className={styles.contactSection}>
@@ -32,8 +36,8 @@ export default function ContactComp() {
         <motion.div 
           className={styles.contactItem}
           whileHover={{ scale: 1.05, backgroundColor: "#2a3d6e", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)" }}>
-          <a href="tel:+7417696780">
-            <img src="/icons/phone.svg" alt="Phone" />
+            <p><IoCallOutline color="green"  size={25}/></p>
+          <a href="tel:+7417696780" target="_blank" rel="noopener noreferrer">
             <span className={styles.contactItemText}>7417696780</span>
           </a>
         </motion.div>
@@ -42,8 +46,8 @@ export default function ContactComp() {
         <motion.div 
           className={styles.contactItem}
           whileHover={{ scale: 1.05, backgroundColor: "#2a3d6e", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)" }}>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" />
+            <p><FaGithub color='black' size={25}/></p>
+          <a href="https://github.com/Nitin-lohumi" target="_blank" rel="noopener noreferrer">
             <span className={styles.contactItemText}>GitHub</span>
           </a>
         </motion.div>
@@ -52,8 +56,8 @@ export default function ContactComp() {
         <motion.div 
           className={styles.contactItem}
           whileHover={{ scale: 1.05, backgroundColor: "#2a3d6e", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)" }}>
-          <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/whatsapp.svg" alt="WhatsApp" />
+            <p><FaWhatsappSquare color='green' size={25}/></p>
+          <a href="https://wa.me/7417696780" target="_blank" rel="noopener noreferrer">
             <span className={styles.contactItemText}>WhatsApp</span>
           </a>
         </motion.div>
@@ -62,8 +66,8 @@ export default function ContactComp() {
         <motion.div 
           className={styles.contactItem}
           whileHover={{ scale: 1.05, backgroundColor: "#2a3d6e", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)" }}>
-          <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/telegram.svg" alt="Telegram" />
+            <p><FaTelegram size={25} color='blue'/></p>
+          <a href="https://web.telegram.org/a/" target="_blank" rel="noopener noreferrer">
             <span className={styles.contactItemText}>Telegram</span>
           </a>
         </motion.div>
@@ -72,8 +76,8 @@ export default function ContactComp() {
         <motion.div 
           className={styles.contactItem}
           whileHover={{ scale: 1.05, backgroundColor: "#2a3d6e", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)" }}>
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+            <p><FaLinkedin size={25} color='blue'/></p>
+          <a href="https://www.linkedin.com/in/nitin-lohumi-1202562b3/" target="_blank" rel="noopener noreferrer">
             <span className={styles.contactItemText}>LinkedIn</span>
           </a>
         </motion.div>
