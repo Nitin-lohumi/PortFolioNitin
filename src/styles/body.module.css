@@ -1,49 +1,122 @@
-.imageBackgroundDiv{
+.imageBackgroundDiv {
     background-image: url("/profileBack.svg");
     background-size: cover;
     object-position: center;
-    background-position-x:center;
+    background-position-x: center;
     object-fit: cover;
     filter: drop-shadow(5px 5px 5px rgba(243, 237, 237, 0.3));
-}
-.image{
-   position: relative;
-   top:200px;
-   left:50%;
-   transform: translate(-50%,-50%) scale(1.2);
-   width: 500px;
-   max-width: 600px;
-   object-fit: cover;
-}
-.info{
+  }
+  
+  .image {
+    position: relative;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 100%; /* Make it responsive */
+    max-width: 500px;
+    object-fit: cover;
+  }
+  
+  .info {
     display: flex;
     position: absolute;
-    top:50%;    
+    top: 50%;
     width: 100%;
     margin: auto;
-    background:rgb(8, 2, 63);
-    text-align:center;
+    background: rgb(8, 2, 63);
+    text-align: center;
     overflow: hidden;
-    word-break:keep-all;
+    word-break: keep-all;
     letter-spacing: 3px;
     border-radius: 1rem;
     height: 200px;
     max-height: 300px;
     border-bottom-left-radius: 130px;
     border-bottom-right-radius: 130px;
-}
-.layoutProfile{
+  }
+  /* Mobile layout */
+  .layoutProfile {
     display: flex;
-}
-.profileInfo{
-    display: subgrid;
-    width: 100%;
-}
-.HideShowWord{
-    word-wrap: none;
-    text-justify: newspaper;
-    padding-left: 10px;
-    padding-right: 10px;
-   font-size: 1.1rem;
-   text-transform: capitalize;
-}
+  }
+  .mainProfileDiv{
+    align-items:center;
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    margin-top: 60px;
+  }
+  .mobilephone{
+    display: flex;
+    position:relative;
+    font-size: 1rem;
+
+  }
+  /* Mobile Flex Layout */
+  @media (max-width: 600px) {
+    .mobilephone{
+      display: flex;
+      position:relative;
+      font-size: 1rem;
+  
+    }
+    .infoIsExpended{
+        border-radius:0.5rem;
+        position:absolute;
+        top:"50px";
+        line-height: 20px;
+        height: 100vh;
+      }
+    .mobileImage{
+      display: flex;
+      position:relative;
+      top: -30px;
+    }
+    .mainProfileDiv{
+        margin-Top:70px;
+        align-items:center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }    
+  
+    .info {
+      height: auto;
+      max-height: none;
+      border-radius: 1rem;
+      margin-top: 10px; /* Add space for better visual */
+    }
+  
+    .HideShowWord {
+      font-size: 1.1rem;
+    }
+  
+    .profileInfo {
+      padding: 10px;
+    }
+  
+    /* Change to flex layout on mobile */
+    .layoutProfile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Make image background smaller for very small devices */
+    .imageBackgroundDiv {
+      background-size: cover;
+      height: 200px;
+    }
+  
+    /* Adjust for expanded state on mobile */
+    .expandedLayout {
+      width: 80vw;
+      height: 80vh;
+      top: 10%;
+      left: 10%;
+      z-index: 1000;
+      cursor: zoom-out;
+      box-shadow: -2px -1px 1px white;
+      border-radius: 10px;
+    }
+  }
+  

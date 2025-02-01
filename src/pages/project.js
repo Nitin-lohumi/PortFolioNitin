@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 function project() {
   return (
     <>
-    <motion.dev>
+    <motion.div>
         <ProjectComp/>
-    </motion.dev>
+    </motion.div>
     </>
   )
 }
