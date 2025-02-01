@@ -70,7 +70,7 @@ function Body() {
             layout
             style={{
               position: isExpanded ? "fixed" : "",
-              top: context.isMobile?isExpanded ? "-12%" : "":isExpanded?"10%":"",
+              top: context.isMobile?isExpanded ? "-12%" : "":isExpanded?"0%":"",
               left:context.isMobile?isExpanded ? "0%" : "":isExpanded?"10%":"",
               zIndex: isExpanded ? 1000 : -1,
               cursor: isExpanded ? "zoom-out" : "zoom-in",

@@ -91,6 +91,7 @@ function ProjectComp() {
           gridTemplateColumns: context.isMobile ? "1fr" : "1fr 3fr",
           width: "100%",
           height:context.isMobile ? "auto" : "100vh",
+          marginTop:"50px",
         }}
       >
         <motion.div
@@ -117,7 +118,7 @@ function ProjectComp() {
             style={{
               margin: "0",
               color: "skyblue",
-              fontSize: "2rem",
+              fontSize: "1.4rem",
               fontWeight: "700",
               textAlign: "center",
             }}
@@ -200,7 +201,7 @@ function ProjectComp() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "2rem",
+                    fontSize: "1rem",
                     color: "white",
                     scrollSnapAlign: "start",
                   }}
@@ -221,21 +222,21 @@ function ProjectComp() {
                         display: "flex",
                         justifyContent: "space-between",
                         width: "95%",
-                        paddingTop: "20px",
+                        paddingTop: "10px",
                       }}
                     >
                       <p style={{ fontSize: "1.7rem" }}>Nitin's Project</p>
                       <a
                         target="_blank"
                         href={v.linkRedirect}
-                        style={{ fontSize: "1.7rem" }}
+                        style={{ fontSize: "1.2rem" }}
                       >
                         <LuExternalLink />
                       </a>
                     </div>
                     <h2
                       style={{
-                        fontSize: "1.8rem",
+                        fontSize: "1.4rem",
                         fontWeight: "700",
                         paddingTop: "34px",
                         paddingBottom: "20px",
@@ -248,11 +249,11 @@ function ProjectComp() {
                       <Image
                         src={v.photo}
                         style={{
-                          marginTop:"10px",
-                          marginBottom:"30px",
-                          scale: "1.9",
-                          paddingBottom: "20px",
-                          paddingTop: "20px",
+                          // marginTop:"10px",
+                          marginBottom:"10px",
+                          scale: "1",
+                          // paddingBottom: "20px",
+                          // paddingTop: "20px",
                         }}
                         alt="image"
                         width={100}
