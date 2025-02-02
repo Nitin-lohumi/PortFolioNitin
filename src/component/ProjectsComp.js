@@ -325,9 +325,9 @@ function ProjectComp() {
               msOverflowStyle: "none",
               cursor: "grab",
             }}
-            drag="x"
+            // drag="x"
             dragConstraints={{ left: -((obj.length - 1) * window.innerWidth) }}
-            dragElastic={0.3}
+            dragElastic={0.2}
             >
               {obj.map((v, i) => (
                 <motion.div
@@ -336,6 +336,7 @@ function ProjectComp() {
                 style={{
                   width: "100%",
                   margin:"0",
+                  // border:"1px solid white",
                   flexShrink: 0,
                   scrollSnapAlign: "start",
                   textAlign: "center",
