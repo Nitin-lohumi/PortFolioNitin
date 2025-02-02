@@ -1,21 +1,21 @@
 .project{
     display: flex;
     width: 100%;
+    height: auto;
     gap: 10px;
 }
 .projectBox{
     margin-top: 50px;
    display: flex;
    flex-direction: column;
-   box-shadow:1px 2px 7px grey;
    border-radius: .7rem;
    text-align: center;
    align-items: center;
    filter: drop-shadow(1px 2px 3px rgba(218, 214, 214, 0.1));
    width:80%;
    background-color: rgba(0, 0, 0, 0.4  );
-   margin-top: 20px;
-   margin-bottom: 20px;
+   /* margin-top: 20px;
+   margin-bottom: 20px; */
    animation: borderMove  4s linear infinite;
 }
 .projectBoxMobile{
@@ -24,12 +24,12 @@
   box-shadow:1px 2px 7px grey;
   border-radius: .7rem;
   align-items: center;
-  filter: drop-shadow(1px 2px 3px rgba(218, 214, 214, 0.1));
-  width:90%;
+  filter: drop-shadow(2px 2px 7px rgba(1, 103, 193, 0.8));
+  width:85%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.4  );
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 80px;
+  /* margin-bottom: 20px; */
   animation: borderMove  4s linear infinite;
 }
 .box{

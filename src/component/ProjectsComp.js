@@ -182,11 +182,12 @@ function ProjectComp() {
         <div
           style={{
             overflowY: context.isMobile ? "hidden" : "scroll",
-            height: context.isMobile ? "auto" : "100vh",
+            height: context.isMobile ? "" : "100vh",
             display: context.isMobile ? "flex" : "",
             width: "100%",
+            maxHeight: context.isMobile ? "fit-content" : "",
             margin:"auto",
-            scrollBehavior: "smooth",
+            scrollBehavior: "unset",
           }}
         >
           {!context.isMobile ? (
@@ -197,7 +198,7 @@ function ProjectComp() {
                   ref={(el) => (projectRefs.current[i] = el)}
                   className={styles.box}
                   style={{
-                    height: "100vh",
+                    // height: "100vh",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -314,6 +315,8 @@ function ProjectComp() {
             <motion.div
             style={{
               width: "100%",
+              height:"700px",
+              maxHeight:"auto",
               overflowX: "auto",
               overflowY:"hidden",
               display: "flex",
@@ -322,9 +325,9 @@ function ProjectComp() {
               msOverflowStyle: "none",
               cursor: "grab",
             }}
-            // drag="x"
+            drag="x"
             dragConstraints={{ left: -((obj.length - 1) * window.innerWidth) }}
-            dragElastic={0.2}
+            dragElastic={0.3}
             >
               {obj.map((v, i) => (
                 <motion.div
@@ -332,7 +335,7 @@ function ProjectComp() {
                 ref={(el) => (projectRefs.current[i] = el)}
                 style={{
                   width: "100%",
-                  margin:"auto",
+                  margin:"0",
                   flexShrink: 0,
                   scrollSnapAlign: "start",
                   textAlign: "center",
@@ -356,10 +359,10 @@ function ProjectComp() {
                         display: "flex",
                         justifyContent: "space-between",
                         width: "95%",
-                        paddingTop: "20px",
+                        paddingTop: "10px", 
                       }}
                     >
-                      <p style={{ fontSize: "1.7rem" }}>Nitin's Project</p>
+                      <p style={{ fontSize: "1.5rem" }}>Nitin's Project</p>
                       <a
                         target="_blank"
                         href={v.linkRedirect}
@@ -370,10 +373,10 @@ function ProjectComp() {
                     </div>
                     <h2
                       style={{
-                        fontSize: "1.8rem",
+                        fontSize: "1.5rem",
                         fontWeight: "700",
-                        paddingTop: "34px",
-                        paddingBottom: "20px",
+                        paddingTop: "30px",
+                        // paddingBottom: "20px",
                         color: "lightyellow",
                       }}
                     >
@@ -386,7 +389,7 @@ function ProjectComp() {
                           marginTop:"10px",
                           marginBottom:"30px",
                           scale: "1.3",
-                          paddingBottom: "20px",
+                          paddingBottom: "10px",
                           paddingTop: "20px",
                         }}
                         alt="image"

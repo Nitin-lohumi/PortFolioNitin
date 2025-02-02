@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }) {
     <>
       <AppContext.Provider value={{ isMobile, setIsMobile }}>
       <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=0.67" />
         <title>Portfolio_</title>
       </Head>
         <Header />

@@ -64,7 +64,7 @@
     .infoIsExpended{
         border-radius:0.5rem;
         position:absolute;
-        top:"50px";
+        top:50px;
         line-height: 20px;
         height: 100vh;
       }
@@ -72,7 +72,7 @@
     margin: 0;
       display: flex;
       position:relative;
-      top: -50px;
+      top: -40px;
       width: 400px;
     }
     .mainProfileDiv{
