@@ -60,6 +60,8 @@ function ProjectComp() {
   const projectRefs = useRef([]);
   const [activeProject, setActiveProject] = useState(obj[0]);
   useEffect(() => {
+    if (projectRefs.current.length === 0) return;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -71,16 +73,16 @@ function ProjectComp() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 } 
     );
-
+  
     projectRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-
-    return () => observer.disconnect();
+  
+    return () => observer.disconnect(); // Cleanup observer
   }, []);
-
+  
   return (
     <>
       <motion.div
