@@ -16,7 +16,7 @@ function Resume() {
             <div className={style.download}>
               <p style={{fontSize:"1.5rem",textAlign:"center",padding:"10px"}}>Click to button to download Resume</p>
               <button style={{paddingTop:"10px",marginBottom:"10px",border:"1px solid white",padding:"5px",borderRadius:".5rem"}}>
-                <a href="/NitinResume.pdf.pdf" download style={{fontSize:"1rem",display:"flex",alignItems:"center"}}>
+                <a href="/NitinResume.pdf" download style={{fontSize:"1rem",display:"flex",alignItems:"center"}}>
                    <FaDownload style={{fontSize:"2rem",paddingRight:"10px"}}/> <p style={{fontSize:"2rem"}}>download</p>
                 </a>
               </button>
