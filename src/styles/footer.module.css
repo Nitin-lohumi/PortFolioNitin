@@ -3,7 +3,7 @@
 .footerContainer {
     background: linear-gradient(135deg, #263a68, #010b1f);
     color: white;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 60px 20px;
     margin-top: 40px;
     /* border-top: 1px solid #2a3d6e; */

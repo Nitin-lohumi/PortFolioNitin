@@ -15,7 +15,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/ROI_image_retrival_AI",
     githubLink: "https://github.com/Nitin-lohumi",
-    photo:"/photo4.png"
+    photo: "/photo4.png"
   },
   {
     projectName: "Blogs Contents",
@@ -24,7 +24,16 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/Blog_platform",
     githubLink: "https://github.com/Nitin-lohumi",
-    photo:"/photo5.png"
+    photo: "/photo5.png"
+  },
+  {
+    projectName: "Save Book Marks",
+    description: "A platform where we can save our bookmarks.",
+    language: "Nextjs,expressjs",
+    linkRedirect: "#",
+    githubprojectLink: "https://github.com/Nitin-lohumi/BookMarks",
+    githubLink: "https://github.com/Nitin-lohumi",
+    photo: "/bookmarkImage.jpg"
   },
   {
     projectName: "Chatting App using Database",
@@ -33,7 +42,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://github.com/Nitin-lohumi/chatAPP",
     githubLink: "https://github.com/Nitin-lohumi",
-    photo:"/chat.png"
+    photo: "/chat.png"
   },
   {
     projectName: "Real-Time ChatApp",
@@ -42,7 +51,7 @@ const obj = [
     linkRedirect: "https://chatapp-s9gx.onrender.com/",
     githubprojectLink: "https://chatapp-s9gx.onrender.com/",
     githubLink: "https://github.com/Nitin-lohumi",
-    photo:"/chatRealTime.png"
+    photo: "/chatRealTime.png"
   },
   {
     projectName: "News App",
@@ -51,7 +60,7 @@ const obj = [
     linkRedirect: "nitinnewsapp.vercel.app",
     githubprojectLink: "https://github.com/Nitin-lohumi/News_latest",
     githubLink: "https://github.com/Nitin-lohumi",
-    photo:"/news.png"
+    photo: "/news.png"
   },
 ];
 
@@ -61,11 +70,10 @@ function ProjectComp() {
   const [activeProject, setActiveProject] = useState(obj[0]);
   useEffect(() => {
     if (projectRefs.current.length === 0) return;
-    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
             const index = projectRefs.current.indexOf(entry.target);
             if (index !== -1) {
               setActiveProject(obj[index]);
@@ -73,16 +81,16 @@ function ProjectComp() {
           }
         });
       },
-      { threshold: 0.3 } 
+      { threshold: [0.4] }
     );
-  
     projectRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-  
-    return () => observer.disconnect(); // Cleanup observer
+
+    return () => observer.disconnect();
   }, []);
-  
+
+
   return (
     <>
       <motion.div
@@ -92,8 +100,8 @@ function ProjectComp() {
           overflowX: context.isMobile ? "scroll" : "hidden",
           gridTemplateColumns: context.isMobile ? "1fr" : "1fr 3fr",
           width: "100%",
-          height:context.isMobile ? "auto" : "100vh",
-          marginTop:"50px",
+          height: context.isMobile ? "auto" : "100vh",
+          marginTop: "50px",
         }}
       >
         <motion.div
@@ -188,7 +196,7 @@ function ProjectComp() {
             display: context.isMobile ? "flex" : "",
             width: "100%",
             maxHeight: context.isMobile ? "fit-content" : "",
-            margin:"auto",
+            margin: "auto",
             scrollBehavior: "unset",
           }}
         >
@@ -208,9 +216,9 @@ function ProjectComp() {
                     color: "white",
                     scrollSnapAlign: "start",
                   }}
-                  initial={{ opacity: 0, scale: 1.4 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, ease: "backInOut" }}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  whileInView={{ opacity: 0.7, scale: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                 >
                   <motion.div
                     className={styles.projectBox}
@@ -253,7 +261,7 @@ function ProjectComp() {
                         src={v.photo}
                         style={{
                           // marginTop:"10px",
-                          marginBottom:"10px",
+                          marginBottom: "10px",
                           scale: "1",
                           // paddingBottom: "20px",
                           // paddingTop: "20px",
@@ -315,41 +323,39 @@ function ProjectComp() {
             </>
           ) : (
             <motion.div
-            style={{
-              width: "100%",
-              height:"700px",
-              maxHeight:"auto",
-              overflowX: "auto",
-              overflowY:"hidden",
-              display: "flex",
-              scrollSnapType: "x mandatory",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              cursor: "grab",
-            }}
-            // drag="x"
-            dragConstraints={{ left: -((obj.length - 1) * window.innerWidth) }}
-            dragElastic={0.2}
+              style={{
+                width: "100%",
+                height: "700px",
+                maxHeight: "auto",
+                overflowX: "auto",
+                overflowY: "hidden",
+                display: "flex",
+                scrollSnapType: "x mandatory",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                cursor: "grab",
+              }}
+              dragConstraints={{ left: -((obj.length - 1) * window.innerWidth) }}
+              dragElastic={0.3}
             >
               {obj.map((v, i) => (
                 <motion.div
-                key={i}
-                ref={(el) => (projectRefs.current[i] = el)}
-                style={{
-                  width: "100%",
-                  margin:"0",
-                  // border:"1px solid white",
-                  flexShrink: 0,
-                  scrollSnapAlign: "start",
-                  textAlign: "center",
-                  padding: "20px",
-                }}
-                 whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, scale: 1.5 }}
+                  key={i}
+                  style={{
+                    width: "100%",
+                    margin: "0",
+                    flexShrink: 0,
+                    scrollSnapAlign: "start",
+                    textAlign: "center",
+                    padding: "20px",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 1, scale: 1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                 >
                   <motion.div
+                    ref={(el) => (projectRefs.current[i] = el)}
                     className={styles.projectBoxMobile}
                     whileInView={{
                       opacity: 1,
@@ -362,7 +368,7 @@ function ProjectComp() {
                         display: "flex",
                         justifyContent: "space-between",
                         width: "95%",
-                        paddingTop: "10px", 
+                        paddingTop: "10px",
                       }}
                     >
                       <p style={{ fontSize: "1.5rem" }}>Nitin's Project</p>
@@ -389,8 +395,8 @@ function ProjectComp() {
                       <Image
                         src={v.photo}
                         style={{
-                          marginTop:"10px",
-                          marginBottom:"30px",
+                          marginTop: "10px",
+                          marginBottom: "30px",
                           scale: "1.3",
                           paddingBottom: "10px",
                           paddingTop: "20px",

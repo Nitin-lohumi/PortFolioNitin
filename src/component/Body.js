@@ -10,7 +10,6 @@ function Body() {
     "exploring the programming languages like -java, JavaScript, and  as well as frameworks such as and ReactJS, node Js, express js. I am also familiar with JavaScript libraries. basically i have learned - front-end : Javascript , ReactJs, JQuery . back-end : express, nodeJs, PHP , Python. Database - mongodb, SQL. Version Control Systems - GIT"
   );
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <motion.div
       initial={{ y: "-100px" }}

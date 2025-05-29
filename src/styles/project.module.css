@@ -1,148 +1,202 @@
-.project{
-    display: flex;
-    width: 100%;
-    height: auto;
-    gap: 10px;
+.project {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 10px;
 }
-.projectBox{
-    margin-top: 50px;
-   display: flex;
-   flex-direction: column;
-   border-radius: .7rem;
-   text-align: center;
-   align-items: center;
-   filter: drop-shadow(1px 2px 3px rgba(218, 214, 214, 0.1));
-   width:80%;
-   background-color: rgba(0, 0, 0, 0.4  );
-   /* margin-top: 20px;
-   margin-bottom: 20px; */
-   animation: borderMove  4s linear infinite;
-}
-.projectBoxMobile{
+.projectBox {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  box-shadow:1px 2px 7px grey;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
+  text-align: center;
   align-items: center;
-  filter: drop-shadow(2px 2px 7px rgba(1, 103, 193, 0.8));
-  width:85%;
+  filter: drop-shadow(1px 2px 3px rgba(218, 214, 214, 0.1));
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* margin-top: 20px;
+   margin-bottom: 20px; */
+  animation: borderMove 4s linear infinite;
+}
+.projectBoxMobile {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 7px rgb(44, 43, 43);
+  border-radius: 0.7rem;
+  align-items: center;
+  filter: drop-shadow(2px 2px 7px rgb(33, 58, 66));
+  width: 85%;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.4  );
+  background-color: rgba(4, 12, 96, 0.4);
   margin-top: 80px;
   /* margin-bottom: 20px; */
-  animation: borderMove  4s linear infinite;
+  animation: borderMove 4s linear infinite;
 }
-.box{
-    height: 600px;
-    max-height: 700;
-    display: flex;
-    width: 80%;
-    margin: auto;
+.box {
+  height: 600px;
+  max-height: 700;
+  display: flex;
+  width: 80%;
+  margin: auto;
 }
-.ittrateDiv{
-    width: 100%;
+.ittrateDiv {
+  width: 100%;
 }
 
-@keyframes borderMove  {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-  /* ************************resume********************* */
-  
-  .mainResumeBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    place-items:center;
-    /* max-height: ; */
-    /* height: ; */
-  }
-  .mainResumeBoxMobile{
-    width: 100%;
-  }
-  
-  .resume{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-  }
-  .resumeMobile{
-    width: 100%;
-  }
-  .mainResumeMobile{
-    position: relative;
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-    border: 4px solid;
-    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-    border-image-slice: 1;
-    animation: moveBorder 3s linear infinite;
-    transition: all 2s linear;
-  }
+/* ************************resume********************* */
 
-  .mainResume {
-    position: relative;
-    width: 55%;
-    margin: auto;
-    padding: 20px;
-    border: 4px solid;
-    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-    border-image-slice: 1;
-    animation: moveBorder 3s linear infinite;
-    transition: all 2s linear;
+.mainResumeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  /* max-height: ; */
+  /* height: ; */
+}
+.mainResumeBoxMobile {
+  width: 100%;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.resumeMobile {
+  width: 100%;
+}
+.mainResumeMobile {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 4px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgb(52, 39, 39),
+    rgb(68, 59, 42),
+    rgb(45, 45, 20),
+    rgb(26, 73, 26),
+    rgb(60, 60, 147),
+    purple
+  );
+  border-image-slice: 1;
+  animation: moveBorder 3s linear infinite;
+  transition: all 2s linear;
+}
+
+.mainResume {
+  position: relative;
+  width: 55%;
+  margin: auto;
+  padding: 20px;
+  border: 4px solid;
+  border-radius: 0.5rem;
+  border-image: linear-gradient(
+    90deg,
+    rgb(78, 68, 68),
+    rgb(91, 60, 3),
+    rgb(155, 155, 110),
+    green,
+    rgb(35, 35, 59),
+    rgb(96, 89, 96)
+  );
+  border-image-slice: 1;
+  animation: moveBorder 3s linear infinite;
+  transition: all 2s linear;
+}
+
+@keyframes moveBorder {
+  0% {
+    opacity: 0.8;
+    border-image-source: inear-gradient(
+      90deg,
+      rgb(48, 47, 47),
+      rgb(95, 84, 64),
+      rgb(124, 124, 60),
+      rgb(75, 135, 75),
+      rgb(52, 52, 63),
+      rgb(99, 47, 99)
+    );
+    transform: scaleY(1) scaleZ(1);
   }
-
-  @keyframes moveBorder {
-    0% {
-      opacity: 0.8;
-      border-image-source: linear-gradient(0deg, rgb(175, 2, 2), rgb(251, 177, 39), yellow, green, blue, purple);
-      transform:  scaleY(1) scaleZ(1);
-    }
-    25% {
-      opacity: 0.9;
-      border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-      transform:  scaleY(1.01) scaleZ(1.01);
-
-    }
-    50% {
-      opacity: 0.9;
-      border-image-source: linear-gradient(180deg, red, orange, yellow, green, blue, purple);
-      transform:  scaleY(1) scaleZ(1);
-
-    }
-    75% {
-      opacity: 0.9;
-      border-image-source: linear-gradient(270deg, red, orange, yellow, green, blue, purple);
-      transform: scaleY(1.01) scaleZ(1.01);
-
-    }
-    100% {
-      opacity: 1;
-      border-image-source: linear-gradient(360deg, red, orange, yellow, green, blue, purple);
-      transform: scaleY(1) scaleZ(1);
-    }
+  25% {
+    opacity: 0.9;
+    border-image-source: linear-gradient(
+      90deg,
+      rgb(0, 0, 0),
+      rgb(91, 86, 76),
+      rgb(63, 63, 48),
+      rgb(48, 73, 48),
+      rgb(70, 70, 92),
+      purple
+    );
+    transform: scaleY(1.01) scaleZ(1.01);
   }
-  
-  .resumeImg{
-    margin:auto;
-    width: 200px;
-    height: 200px;
-    filter: drop-shadow(1px 1px 12px rgba(0, 0, 0, 0.1));
+  50% {
+    opacity: 0.9;
+    border-image-source: linear-gradient(
+      180deg,
+      rgb(79, 46, 46),
+      rgb(50, 46, 38),
+      rgb(80, 80, 59),
+      rgb(77, 109, 77),
+      blue,
+      rgb(110, 92, 110)
+    );
+    transform: scaleY(1) scaleZ(1);
   }
+  75% {
+    opacity: 0.9;
+    border-image-source: linear-gradient(
+      270deg,
+      rgb(152, 112, 112),
+      rgb(63, 48, 21),
+      rgb(106, 106, 102),
+      rgb(59, 64, 59),
+      blue,
+      rgb(65, 60, 65)
+    );
+    transform: scaleY(1.01) scaleZ(1.01);
+  }
+  100% {
+    opacity: 1;
+    border-image-source: linear-gradient(
+      360deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      purple
+    );
+    transform: scaleY(1) scaleZ(1);
+  }
+}
 
-  .download{
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.resumeImg {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(1px 1px 12px rgba(0, 0, 0, 0.1));
+}
+
+.download {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
